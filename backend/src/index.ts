@@ -12,9 +12,9 @@ app.use(express.json());
 
 connectDB();
 
-app.use('/api/shops', shopsRouter);
-app.use('/api/products', productsRouter);
-app.use('/api/orders', ordersRouter);
+app.use('/shops', shopsRouter);
+app.use('/products', productsRouter);
+app.use('/orders', ordersRouter);
 
 app.get('/', (req, res) => res.send('Flower Delivery API (TS) running'));
 
