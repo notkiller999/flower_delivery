@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     const shops = await Shop.find();
     res.json(shops);
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 });
@@ -16,7 +16,7 @@ router.get('/:id', async (req, res) => {
   try {
     const shop = await Shop.findById(req.params.id);
     res.json(shop);
-  } catch (e) {
+  } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
 });

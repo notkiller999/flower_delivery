@@ -1,10 +1,11 @@
-import { Schema, model, Document } from 'mongoose';
+import mongoose, { Schema, model, Document } from 'mongoose';
 
 export interface IShop extends Document {
-  name: string;
-  address?: string;
-  location?: { type: string; coordinates: number[] };
-  phone?: string;
+    _id: mongoose.Types.ObjectId;
+    name: string;
+    address?: string;
+    location?: { type: string; coordinates: number[] };
+    phone?: string;
 }
 
 const ShopSchema = new Schema<IShop>({

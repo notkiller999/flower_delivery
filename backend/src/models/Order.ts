@@ -1,4 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
+import mongoose, { Schema, model, Document } from 'mongoose';
 
 interface IOrderItem {
   product: any;
@@ -7,6 +7,7 @@ interface IOrderItem {
 }
 
 export interface IOrder extends Document {
+    _id: mongoose.Types.ObjectId;
   email?: string;
   phone?: string;
   deliveryAddress?: string;

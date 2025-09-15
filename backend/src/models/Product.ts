@@ -1,7 +1,8 @@
-import { Schema, model, Document } from 'mongoose';
+import mongoose, { Schema, model, Document } from 'mongoose';
 import { IShop } from './Shop';
 
 export interface IProduct extends Document {
+    _id: mongoose.Types.ObjectId;
   shop: IShop['_id'];
   title: string;
   description?: string;

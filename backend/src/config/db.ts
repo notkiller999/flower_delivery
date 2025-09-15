@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const connectDB = async () => {
-  const uri = process.env.MONGO_URI || 'mongodb://localhost:27017/flower-delivery-ts';
+  const uri = process.env.MONGO_URI as string || '5000';
   try {
     await mongoose.connect(uri);
     console.log('MongoDB connected');
