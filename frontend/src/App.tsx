@@ -15,7 +15,7 @@ export default function App(){
         <Container sx={{ mt: 3 }}>
             <Routes>
                 <Route path="/" element={<MainPage />} />
-                <Route path="/cart" element={<CartPage />} />
+                <Route path="cart" element={<CartPage />} />
                 <Route path="/orders/:id" element={<OrderDetails />} />
             </Routes>
         </Container>
