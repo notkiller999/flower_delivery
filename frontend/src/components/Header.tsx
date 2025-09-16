@@ -14,7 +14,7 @@ export default function Header() {
 
     const onHandleClick = (name: string) => {
         if (activeLinks !== name) {
-            dispatch<any>(fetchProducts({ shop: shopId, sort: name, favoriteFirst: false}))
+            dispatch<any>(fetchProducts({ shop: shopId, sort: name}))
             changeActiveLink( name)
         }
     }

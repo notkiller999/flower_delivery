@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { api } from '../../api/api';
 
 export const createOrder = createAsyncThunk('orders/create', async (payload: any) => {
-    console.log(payload);
-    
   const res = await api.post('/orders', payload);
   return res.data;
 });

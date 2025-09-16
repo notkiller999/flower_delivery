@@ -9,7 +9,6 @@ export interface IProduct extends Document {
   price: number;
   images?: string[];
   dateAdded?: Date;
-  favorite?: boolean;
 }
 
 const ProductSchema = new Schema<IProduct>({
@@ -19,7 +18,6 @@ const ProductSchema = new Schema<IProduct>({
   price: Number,
   images: [String],
   dateAdded: { type: Date, default: Date.now },
-  favorite: { type: Boolean, default: false }
 });
 
 export default model<IProduct>('Product', ProductSchema);

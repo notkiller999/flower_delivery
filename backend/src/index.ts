@@ -16,7 +16,7 @@ app.use('/shops', shopsRouter);
 app.use('/products', productsRouter);
 app.use('/orders', ordersRouter);
 
-app.get('/', (req, res) => res.send('Flower Delivery API (TS) running'));
+app.get('/', (req, res) => res.send('Flower Delivery API running'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on ${PORT}`));
