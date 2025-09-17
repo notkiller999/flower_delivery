@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import {Box, Typography, List, ListItem, ListItemText} from "@mui/material";
+import {Box, Typography, List} from "@mui/material";
 import Form from "../components/Form";
 import { CartItem } from "../features/cart/cartSlice";
 import CartCard from "../components/CartCard";

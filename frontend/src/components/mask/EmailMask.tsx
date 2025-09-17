@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { forwardRef } from 'react';
 import { IMaskInput } from 'react-imask';
 
 interface CustomProps {
@@ -6,9 +6,9 @@ interface CustomProps {
 	name: string;
 }
 
-const typingMask = /^[A-Za-z0-9@._%+\-]*$/; // дозволяє вводити потрібні символи (включно з @ та .)
+const typingMask = /^[A-Za-z0-9@._%+\-]*$/;
 
-const EmailMask = React.forwardRef<HTMLInputElement, CustomProps>(
+const EmailMask = forwardRef<HTMLInputElement, CustomProps>(
 
     function TextMaskCusto(props, ref) {
         const {onChange, ...other} = props;

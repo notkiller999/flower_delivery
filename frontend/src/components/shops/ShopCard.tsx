@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 
 type ShopListProps = {
-  shop: Shop;
+    shop: Shop;
 }
 
 export default function ShopCard ({shop}: ShopListProps) {

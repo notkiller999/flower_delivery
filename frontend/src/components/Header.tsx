@@ -33,6 +33,9 @@ export default function Header() {
                 <Link href='/cart' color="inherit" underline={location.pathname === '/cart' ? 'always' : 'hover'}>
                     Shoping cart
                 </Link>
+                <Link href='/history' color="inherit" underline={location.pathname === '/history' ? 'always' : 'hover'}>
+                    History
+                </Link>
             </Stack>
           </Typography>
           <Typography component='div' variant="body2">

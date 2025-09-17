@@ -7,8 +7,8 @@ interface Params {shop: string, page: number, limit: number, sort: string, favor
 
 
 export const fetchProducts = createAsyncThunk(
-  'products/fetch',
-  async ({ shop = '', page = 1, limit = 12, sort = '', favoriteIds}: Partial<Params> = {}) => {
+    'products/fetch',
+    async ({ shop = '', page = 1, limit = 12, sort = '', favoriteIds}: Partial<Params> = {}) => {
 
     const getFavoriteIds = (): string[] => {
         try {
@@ -24,7 +24,6 @@ export const fetchProducts = createAsyncThunk(
     };
 
     const favorite = getFavoriteIds(); 
-
     const params = { shop, page, limit, sort, favoriteIds: favorite.join(',')};
     const res = await api.get('/products', { params });    
     return res.data
@@ -37,13 +36,14 @@ const productsSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchProducts.fulfilled, (state, action) => {
-        state.items = action.payload.data;
-        state.total = action.payload.total;
-        state.status = 'succeeded';
-        });
-        builder.addCase(fetchProducts.pending, state => { state.status = 'loading'; });
-        builder.addCase(fetchProducts.rejected, state => { state.status = 'failed'; });
+            state.items = action.payload.data;
+            state.total = action.payload.total;
+            state.status = 'succeeded';
+            });
+            builder.addCase(fetchProducts.pending, state => { state.status = 'loading'; });
+            builder.addCase(fetchProducts.rejected, state => { state.status = 'failed'; });
+        }
     }
-});
+);
 
 export default productsSlice.reducer;

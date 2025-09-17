@@ -78,7 +78,7 @@ export default function Form({cart, total}: PropsCart) {
         if (cart.items.length === 0) return alert("Cart is empty");
         const payload: OrderPayload = {
             email: form.email,
-            phone: form.phone,
+            phone: form.phone.replace(/\D/g, ''),
             deliveryAddress: form.address,
             deliveryLocation: { type: "Point", coordinates: [0, 0] },
             items: cart.items.map((i: any) => ({

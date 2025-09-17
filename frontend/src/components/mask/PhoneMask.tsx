@@ -1,4 +1,4 @@
-import React from "react";
+import { forwardRef } from "react";
 import { IMaskInput } from "react-imask";
 
 interface CustomProps {
@@ -6,7 +6,7 @@ interface CustomProps {
 	name: string;
 }
 
-const PhoneMask = React.forwardRef<HTMLInputElement, CustomProps>(
+const PhoneMask = forwardRef<HTMLInputElement, CustomProps>(
 	function TextMaskCustom(props, ref) {
 		const { onChange, ...other } = props;
 		return (

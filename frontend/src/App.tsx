@@ -4,6 +4,7 @@ import CartPage from './pages/CartPage';
 import OrderDetails from './pages/OrderDetails';
 import Header from './components/Header';
 import MainPage from './pages/MainPage';
+import OrderPage from './pages/OrderPage';
 
 export default function App(){
     return (
@@ -17,6 +18,7 @@ export default function App(){
                 <Route path="/" element={<MainPage />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/orders/:id" element={<OrderDetails />} />
+                <Route path="/history" element={<OrderPage/>}/>
             </Routes>
         </Container>
         </BrowserRouter>

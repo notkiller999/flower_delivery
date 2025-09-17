@@ -9,13 +9,13 @@ export interface IShop extends Document {
 }
 
 const ShopSchema = new Schema<IShop>({
-  name: { type: String, required: true },
-  address: String,
-  location: {
-    type: { type: String, default: 'Point' },
-    coordinates: [Number]
-  },
-  phone: String
+    name: { type: String, required: true },
+    address: String,
+    location: {
+        type: { type: String, default: 'Point' },
+        coordinates: [Number]
+    },
+    phone: String
 });
 
 ShopSchema.index({ location: '2dsphere' });
